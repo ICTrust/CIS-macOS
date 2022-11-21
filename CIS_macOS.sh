@@ -38,20 +38,20 @@ BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
 print_success() {
-    printf "${GREEN}$1 ${NC}"
+    printf "${GREEN}$1 ${NC}\n"
 }
 
 print_info() {
-    printf "${BLUE}[INFO] $1 ${NC}"
+    printf "${BLUE}[INFO] $1 ${NC}\n"
 }
 
 print_fail() {
-    printf "${RED}[ERROR] $1 ${NC}"
+    printf "${RED}[ERROR] $1 ${NC}\n"
 }
 
 
 print_warn() {
-    printf "${RED}[WARNING] $1 ${NC}"
+    printf "${RED}[WARNING] $1 ${NC}\n"
 }
 
 # List of current users
@@ -644,7 +644,7 @@ sudo /usr/bin/csrutil enable authenticated-root
 # 5.20 Enable Library Validation
 ################################################
 print_info "Enable library validation"
-sudo defaults write /Library/Preferences/com.apple.security.libraryvalidation.plist DisableLibraryValidation DisableLibraryValidation -bool false
+sudo defaults write /Library/Preferences/com.apple.security.libraryvalidation.plist DisableLibraryValidation -bool false
 
 ################################################
 # 6 User Accounts and Environment
